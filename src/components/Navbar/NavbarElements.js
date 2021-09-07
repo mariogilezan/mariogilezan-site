@@ -1,9 +1,12 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import { Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
+  background: #1e282d;
   padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
 `
 
 export const NavContainer = styled(Container)`
@@ -22,7 +25,7 @@ export const NavContainer = styled(Container)`
   }
 `
 
-export const Logo = styled(Link)`
+export const Logo = styled(AnchorLink)`
   display: inline-block;
   text-decoration: none;
   font-size: 1.5rem;
@@ -55,7 +58,7 @@ export const NavItem = styled.li`
   }
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   transition: color 0.25s;
   &:hover {

@@ -17,19 +17,19 @@ module.exports = {
     menuLinks: [
       {
         name: `Home`,
-        slug: `/`,
+        href: `#home`,
       },
       {
         name: `About`,
-        slug: `/about`,
+        href: `#about`,
       },
       {
         name: `Projects`,
-        slug: `/projects`,
+        href: `#projects`,
       },
       {
         name: `Contact`,
-        slug: `/contact`,
+        href: `#contact`,
       },
     ],
   },

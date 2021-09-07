@@ -1,6 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import Hero from "../components/Hero"
+import About from "../components/About"
+import Projects from "../components/Projects"
+import Contact from "../components/Contact"
 
 export default function Home({ location }) {
   const title = "Home"
@@ -9,7 +13,10 @@ export default function Home({ location }) {
   return (
     <Layout location={location}>
       <Seo title={title} pathname={pathname} />
-      <h1>Home Page</h1>
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
     </Layout>
   )
 }

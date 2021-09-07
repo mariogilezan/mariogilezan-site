@@ -12,23 +12,24 @@ import { TextHighlight } from "../../styles/globalStyles"
 
 export default function Navbar() {
   const { menuLinks } = useSiteMetadata()
+  console.log(menuLinks)
   return (
     <>
       <Nav>
         <NavContainer>
-          <Logo to="/">
+          <Logo offset="100" href="#home">
             <TextHighlight>M</TextHighlight>G
           </Logo>
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink to={link.slug} activeStyle={{ color: "#00a4ea" }}>
+                <NavLink offset="100" href={link.href}>
                   {link.name}
                 </NavLink>
               </NavItem>
             ))}
           </NavList>
-          <div className="darkMode">Dark Mode</div>
+          <div className="darkMode">Socials</div>
         </NavContainer>
       </Nav>
     </>
