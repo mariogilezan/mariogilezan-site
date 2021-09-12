@@ -3,7 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import { Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
-  background: #1e282d;
+  background: ${({ theme }) => theme.color.primary};
   padding: 1.2rem 0;
   position: sticky;
   top: 0;
@@ -14,7 +14,7 @@ export const NavContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
     flex-direction: column;
     row-gap: 2rem;
     .darkMode {
@@ -33,11 +33,19 @@ export const Logo = styled(AnchorLink)`
   padding: 0.2rem;
   border: 3px solid transparent;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #00a4ea, #fff);
+  border-image-source: linear-gradient(
+    to right,
+    ${({ theme }) => theme.color.accent},
+    ${({ theme }) => theme.color.light}
+  );
   &:hover {
-    border-image-source: linear-gradient(to left, #00a4ea, #fff);
+    border-image-source: linear-gradient(
+      to left,
+      ${({ theme }) => theme.color.accent},
+      ${({ theme }) => theme.color.light}
+    );
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
     align-self: flex-start;
   }
 `
@@ -52,7 +60,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   &:not(:last-child) {
     margin-right: 2rem;
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: ${({ theme }) => theme.screen.xs}) {
       margin-right: 1.5rem;
     }
   }
@@ -62,6 +70,6 @@ export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   transition: color 0.25s;
   &:hover {
-    color: #00a4ea;
+    color: ${({ theme }) => theme.color.accent};
   }
 `

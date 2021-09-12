@@ -12,18 +12,17 @@ import { TextHighlight } from "../../styles/globalStyles"
 
 export default function Navbar() {
   const { menuLinks } = useSiteMetadata()
-  console.log(menuLinks)
   return (
     <>
       <Nav>
         <NavContainer>
-          <Logo offset="100" href="#home">
+          <Logo offset="150" href="#home">
             <TextHighlight>M</TextHighlight>G
           </Logo>
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink offset="100" href={link.href}>
+                <NavLink offset="150" href={link.href}>
                   {link.name}
                 </NavLink>
               </NavItem>
