@@ -11,7 +11,7 @@ export const useSiteMetadata = () => {
             siteUrl
             menuLinks {
               name
-              href
+              slug
             }
           }
         }

@@ -1,6 +1,7 @@
 import React from "react"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 import {
+  ContactLink,
   Logo,
   Nav,
   NavContainer,
@@ -16,19 +17,19 @@ export default function Navbar() {
     <>
       <Nav>
         <NavContainer>
-          <Logo offset="150" href="#home">
+          <Logo to="/">
             <TextHighlight>M</TextHighlight>G
           </Logo>
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink offset="150" href={link.href}>
+                <NavLink to={link.slug} activeStyle={{ color: "#00A4EA" }}>
                   {link.name}
                 </NavLink>
               </NavItem>
             ))}
           </NavList>
-          <div className="darkMode">Socials</div>
+          <ContactLink to="/contact">Contact</ContactLink>
         </NavContainer>
       </Nav>
     </>

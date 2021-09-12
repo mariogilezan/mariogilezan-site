@@ -17,19 +17,15 @@ module.exports = {
     menuLinks: [
       {
         name: `Home`,
-        href: `#home`,
+        slug: `/`,
       },
       {
         name: `About`,
-        href: `#about`,
+        slug: `/about`,
       },
       {
         name: `Projects`,
-        href: `#projects`,
-      },
-      {
-        name: `Contact`,
-        href: `#contact`,
+        slug: `/projects`,
       },
     ],
   },
@@ -50,10 +46,18 @@ module.exports = {
         name: `Mario Gilezan`,
         short_name: `MG`,
         start_url: `/`,
-        background_color: `#FEFEFE`,
-        theme_color: `#0081CF`,
+        background_color: `#1E282D`,
+        theme_color: `#00A4EA`,
         display: `standalone`,
         icon: `content/assets/page-icon.png`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
       },
     },
     `gatsby-plugin-styled-components`,

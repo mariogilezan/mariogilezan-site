@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import AnchorLink from "react-anchor-link-smooth-scroll"
+import { Link } from "gatsby"
 import { Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
@@ -15,17 +15,16 @@ export const NavContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    flex-direction: column;
-    row-gap: 2rem;
-    .darkMode {
-      position: absolute;
-      top: 1.1rem;
-      right: 1.25rem;
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    justify-content: stretch;
   }
 `
 
-export const Logo = styled(AnchorLink)`
+export const Logo = styled(Link)`
   display: inline-block;
   text-decoration: none;
   font-size: 1.5rem;
@@ -46,7 +45,8 @@ export const Logo = styled(AnchorLink)`
     );
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    align-self: flex-start;
+    grid-row: 1 / 2;
+    justify-self: start;
   }
 `
 
@@ -55,6 +55,11 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
 `
 
 export const NavItem = styled.li`
@@ -66,10 +71,26 @@ export const NavItem = styled.li`
   }
 `
 
-export const NavLink = styled(AnchorLink)`
+export const NavLink = styled(Link)`
   text-decoration: none;
   transition: color 0.25s;
   &:hover {
     color: ${({ theme }) => theme.color.accent};
+  }
+`
+
+export const ContactLink = styled(Link)`
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.4rem;
+  background-color: ${({ theme }) => theme.color.accent};
+  transition: opacity 0.25s;
+  &:hover {
+    opacity: 0.7;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
+    justify-self: end;
+    grid-row: 1 / 2;
   }
 `
