@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Container } from "../../styles/globalStyles"
+import { Button, Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.color.primary};
@@ -79,16 +79,7 @@ export const NavLink = styled(Link)`
   }
 `
 
-export const ContactLink = styled(Link)`
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.4rem 1.2rem;
-  border-radius: 0.4rem;
-  background-color: ${({ theme }) => theme.color.accent};
-  transition: opacity 0.25s;
-  &:hover {
-    opacity: 0.7;
-  }
+export const ContactLink = styled(Button)`
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
     justify-self: end;
     grid-row: 1 / 2;
