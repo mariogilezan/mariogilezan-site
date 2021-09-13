@@ -23,13 +23,13 @@ export default function Navbar() {
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink to={link.slug} activeStyle={{ color: "#00A4EA" }}>
+                <NavLink to={link.slug} name={link.name}>
                   {link.name}
                 </NavLink>
               </NavItem>
             ))}
           </NavList>
-          <ContactLink to="/contact" blue="true">
+          <ContactLink to="/#contact" blue="true">
             Contact
           </ContactLink>
         </NavContainer>

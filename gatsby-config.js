@@ -21,11 +21,11 @@ module.exports = {
       },
       {
         name: `About`,
-        slug: `/about`,
+        slug: `/#about`,
       },
       {
         name: `Projects`,
-        slug: `/projects`,
+        slug: `/#projects`,
       },
     ],
   },
@@ -56,8 +56,14 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/,
+          include: /assets/,
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
       },
     },
     `gatsby-plugin-styled-components`,

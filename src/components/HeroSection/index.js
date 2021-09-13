@@ -21,10 +21,10 @@ export default function HeroSection() {
             Vršac, <TextHighlight>Serbia</TextHighlight>.
           </HeroHeading>
           <HeroButtonContainer>
-            <HeroButton to="/projects" blue="true" bold="true" lg="true">
+            <HeroButton to="/#projects" blue="true" bold="true" lg="true">
               My Projects
             </HeroButton>
-            <HeroButton to="/contact" bold="true" lg="true">
+            <HeroButton to="/#contact" bold="true" lg="true">
               Contact Me
             </HeroButton>
           </HeroButtonContainer>

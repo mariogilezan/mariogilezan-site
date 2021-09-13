@@ -1,34 +1,28 @@
 import styled from "styled-components"
-import HeroIconSrc from "../../images/code_thinking.svg"
+import HeroIconSrc from "../../assets/code_thinking.svg"
 import { Button } from "../../styles/globalStyles"
 
 export const HeroContainer = styled.section`
-  margin-top: 6rem;
+  margin: 4rem 0;
   width: 100%;
-  height: 90%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  place-content: center;
   @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    margin-top: 2rem;
-    flex-direction: column;
-    align-items: center;
+    margin: 2rem 0;
   }
   @media screen and (max-height: ${({ theme }) => theme.screen.s}) {
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 `
 
 export const HeroDetails = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-content: center;
   gap: 2rem;
   @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    width: 100%;
-    align-items: center;
     text-align: center;
-    padding: 0 1rem;
-    gap: 1rem;
   }
 `
 
@@ -47,23 +41,26 @@ export const HeroHeading = styled.h1`
 export const HeroButtonContainer = styled.div`
   display: flex;
   gap: 2rem;
+  text-align: center;
+  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
+    justify-content: center;
+  }
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
+    margin: 0 auto;
     flex-direction: column;
     gap: 1rem;
-    width: 100%;
-    padding: 0 2rem;
+    width: 90%;
   }
 `
 
 export const HeroButton = styled(Button)``
 
 export const HeroIllustrationContainer = styled.div`
-  width: 50%;
-  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    width: 100%;
-  }
+  display: grid;
+  place-content: center;
 `
 
 export const HeroIcon = styled(HeroIconSrc)`
-  width: 100%;
+  max-width: 18rem;
+  max-height: 18rem;
 `

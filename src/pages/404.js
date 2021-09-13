@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import { Container } from "../styles/globalStyles"
-import NotFoundIconSrc from "../images/page_not_found.svg"
+import NotFoundIconSrc from "../assets/page_not_found.svg"
 
 const NotFoundContainer = styled(Container)`
   max-height: 20rem;
