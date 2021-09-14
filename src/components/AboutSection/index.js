@@ -2,6 +2,7 @@ import React from "react"
 import {
   AboutContainer,
   AboutDetails,
+  AboutHeading,
   AboutIcon,
   AboutIllustrationContainer,
   AboutText,
@@ -11,6 +12,7 @@ export default function AboutSection() {
   return (
     <>
       <AboutContainer id="about">
+        <AboutHeading>About Me</AboutHeading>
         <AboutDetails>
           <AboutText>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat

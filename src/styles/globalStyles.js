@@ -16,8 +16,8 @@ export const theme = {
     lg: "62rem",
   },
   padding: {
-    sm: "0.4rem 1.2rem",
-    lg: "0.8rem 1.6rem",
+    sm: "0.3rem 1rem",
+    lg: "0.7rem 1.4rem",
   },
 }
 
@@ -54,7 +54,6 @@ export const Button = styled(AnchorLink)`
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  border-radius: 4rem;
   border: ${({ lg }) => (lg ? "3px" : "2px")} solid
     ${({ theme, blue }) => (blue ? theme.color.accent : theme.color.light)};
   padding: ${({ theme, lg }) => (lg ? theme.padding.lg : theme.padding.sm)};
@@ -69,7 +68,7 @@ export const Button = styled(AnchorLink)`
         blue ? theme.color.accent + "75" : theme.color.light + "75"};
   }
   &:active {
-    transform: scale(1);
     box-shadow: none;
+    transform: scale(1);
   }
 `

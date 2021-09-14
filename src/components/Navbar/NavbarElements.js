@@ -40,12 +40,14 @@ export const Logo = styled(Link)`
     ${({ theme }) => theme.color.accent},
     ${({ theme }) => theme.color.light}
   );
+  transition: all 0.25s;
   &:hover {
-    border-image-source: linear-gradient(
-      to left,
-      ${({ theme }) => theme.color.accent},
-      ${({ theme }) => theme.color.light}
-    );
+    box-shadow: 0 0 0.4rem 0.15rem ${({ theme }) => theme.color.accent};
+    transform: scale(1.05);
+  }
+  &:active {
+    box-shadow: none;
+    transform: scale(0.95);
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
     grid-row: 1 / 2;
@@ -76,9 +78,10 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(AnchorLink)`
   text-decoration: none;
-  transition: color 0.25s;
+  transition: color 0.25s, text-shadow 0.25s;
   &:hover {
     color: ${({ theme }) => theme.color.accent};
+    text-shadow: 0 0 0.5rem ${({ theme }) => theme.color.accent};
   }
 `
 

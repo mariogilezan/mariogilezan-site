@@ -11,6 +11,5 @@ export const Wrapper = styled.div`
 
 export const Content = styled.main`
   flex-grow: 1;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 2rem 0;
 `

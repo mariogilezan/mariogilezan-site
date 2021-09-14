@@ -4,18 +4,12 @@ import HeroIconSrc from "../../assets/code_thinking.svg"
 import { Button } from "../../styles/globalStyles"
 
 export const HeroContainer = styled.section`
-  margin: 4rem 0;
+  margin: 2rem 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
   place-content: center;
-  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    margin: 2rem 0;
-  }
-  @media screen and (max-height: ${({ theme }) => theme.screen.s}) {
-    margin: 2rem 0;
-  }
 `
 
 export const HeroDetails = motion(styled.div`
