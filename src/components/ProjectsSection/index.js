@@ -16,7 +16,7 @@ export default function ProjectsSection() {
       allFile {
         nodes {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(placeholder: BLURRED)
           }
           name
         }

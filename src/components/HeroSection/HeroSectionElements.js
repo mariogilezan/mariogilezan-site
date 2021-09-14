@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 import HeroIconSrc from "../../assets/code_thinking.svg"
 import { Button } from "../../styles/globalStyles"
 
@@ -17,14 +18,14 @@ export const HeroContainer = styled.section`
   }
 `
 
-export const HeroDetails = styled.div`
+export const HeroDetails = motion(styled.div`
   display: grid;
   place-content: center;
   gap: 2rem;
   @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
     text-align: center;
   }
-`
+`)
 
 export const HeroHeading = styled.h1`
   margin: 0;
@@ -55,10 +56,10 @@ export const HeroButtonContainer = styled.div`
 
 export const HeroButton = styled(Button)``
 
-export const HeroIllustrationContainer = styled.div`
+export const HeroIllustrationContainer = motion(styled.div`
   display: grid;
   place-content: center;
-`
+`)
 
 export const HeroIcon = styled(HeroIconSrc)`
   max-width: 18rem;

@@ -11,11 +11,20 @@ import {
 } from "./NavbarElements"
 import { TextHighlight } from "../../styles/globalStyles"
 
+const navbarVariants = {
+  hidden: { opacity: 0, y: -100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 50 },
+  },
+}
+
 export default function Navbar() {
   const { menuLinks } = useSiteMetadata()
   return (
     <>
-      <Nav>
+      <Nav variants={navbarVariants} initial="hidden" animate="visible">
         <NavContainer>
           <Logo to="/">
             <TextHighlight>M</TextHighlight>G

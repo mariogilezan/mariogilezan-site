@@ -4,9 +4,9 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export const theme = {
   color: {
-    primary: "#1E282D",
-    light: "#FFF",
-    accent: "#00A4EA",
+    primary: "#1e282d",
+    light: "#ffffff",
+    accent: "#00a4ea",
   },
   screen: {
     xs: "22.5rem",
@@ -51,20 +51,25 @@ export const TextHighlight = styled.span`
 `
 
 export const Button = styled(AnchorLink)`
+  white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  border-radius: 0.4rem;
+  border-radius: 4rem;
+  border: ${({ lg }) => (lg ? "3px" : "2px")} solid
+    ${({ theme, blue }) => (blue ? theme.color.accent : theme.color.light)};
   padding: ${({ theme, lg }) => (lg ? theme.padding.lg : theme.padding.sm)};
-  background-color: ${({ blue, theme }) =>
-    blue ? theme.color.accent : theme.color.light};
   color: ${({ blue, theme }) =>
-    blue ? theme.color.light : theme.color.primary};
+    blue ? theme.color.accent : theme.color.light};
   font-weight: ${({ bold }) => bold && "bold"};
-  transition: opacity 0.25s, transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s;
   &:hover {
-    opacity: 0.7;
+    transform: scale(1.05);
+    box-shadow: 0 0 0.5rem 0.25rem
+      ${({ blue, theme }) =>
+        blue ? theme.color.accent + "75" : theme.color.light + "75"};
   }
   &:active {
-    transform: scale(0.95);
+    transform: scale(1);
+    box-shadow: none;
   }
 `
