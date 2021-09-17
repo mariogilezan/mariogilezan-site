@@ -1,15 +1,14 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { motion } from "framer-motion"
 import { Button, Container } from "../../styles/globalStyles"
 
-export const Nav = motion(styled.nav`
+export const Nav = styled.nav`
   background: ${({ theme }) => theme.color.primary};
   padding: 1.2rem 0;
   position: sticky;
   top: 0;
   z-index: 10;
-`)
+`
 
 export const NavContainer = styled(Container)`
   position: relative;

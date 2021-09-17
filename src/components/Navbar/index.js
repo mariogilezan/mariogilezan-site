@@ -11,20 +11,11 @@ import {
 } from "./NavbarElements"
 import { TextHighlight } from "../../styles/globalStyles"
 
-const navbarVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 50 },
-  },
-}
-
 export default function Navbar() {
   const { menuLinks } = useSiteMetadata()
   return (
     <>
-      <Nav variants={navbarVariants} initial="hidden" animate="visible">
+      <Nav>
         <NavContainer>
           <Logo to="/">
             <TextHighlight>M</TextHighlight>G
@@ -32,7 +23,11 @@ export default function Navbar() {
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink to={link.slug} name={link.name}>
+                <NavLink
+                  to={link.slug}
+                  name={link.name}
+                  activeStyle={{ color: "#00a4ea" }}
+                >
                   {link.name}
                 </NavLink>
               </NavItem>

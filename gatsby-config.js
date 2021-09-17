@@ -67,12 +67,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100,
-      },
-    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {

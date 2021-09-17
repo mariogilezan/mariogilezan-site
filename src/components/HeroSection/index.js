@@ -17,8 +17,9 @@ const detailsVariants = {
     x: 0,
     transition: {
       type: "spring",
-      stiffness: 30,
-      delay: 0.5,
+      bounce: 0,
+      duration: 1.25,
+      delay: 0.25,
     },
   },
 }
@@ -30,8 +31,9 @@ const illustrationVariants = {
     x: 0,
     transition: {
       type: "spring",
-      stiffness: 30,
-      delay: 0.5,
+      bounce: 0,
+      duration: 1.25,
+      delay: 0.25,
     },
   },
 }
@@ -41,9 +43,9 @@ export default function HeroSection() {
     <>
       <HeroContainer>
         <HeroDetails
+          variants={detailsVariants}
           initial="hidden"
           animate="visible"
-          variants={detailsVariants}
         >
           <HeroHeading>
             <TextHighlight>Hi</TextHighlight>, I&apos;m Mario.
@@ -51,18 +53,18 @@ export default function HeroSection() {
             Vršac, <TextHighlight>Serbia</TextHighlight>.
           </HeroHeading>
           <HeroButtonContainer>
-            <HeroButton to="/#projects" bold="true" blue="true" lg="true">
+            <HeroButton to="/projects" bold="true" blue="true" lg="true">
               My Projects
             </HeroButton>
-            <HeroButton to="/#contact" bold="true" lg="true">
+            <HeroButton to="/contact" bold="true" lg="true">
               Contact Me
             </HeroButton>
           </HeroButtonContainer>
         </HeroDetails>
         <HeroIllustrationContainer
+          variants={illustrationVariants}
           initial="hidden"
           animate="visible"
-          variants={illustrationVariants}
         >
           <HeroIcon />
         </HeroIllustrationContainer>
