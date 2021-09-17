@@ -10,25 +10,11 @@ import {
 } from "./HeroSectionElements"
 import { TextHighlight } from "../../styles/globalStyles"
 
-const detailsVariants = {
-  hidden: { opacity: 0, x: "-100vw" },
+const heroVariants = {
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 1.25,
-      delay: 0.25,
-    },
-  },
-}
 
-const illustrationVariants = {
-  hidden: { opacity: 0, x: "100vw" },
-  visible: {
-    opacity: 1,
-    x: 0,
     transition: {
       type: "spring",
       bounce: 0,
@@ -41,12 +27,8 @@ const illustrationVariants = {
 export default function HeroSection() {
   return (
     <>
-      <HeroContainer>
-        <HeroDetails
-          variants={detailsVariants}
-          initial="hidden"
-          animate="visible"
-        >
+      <HeroContainer variants={heroVariants} initial="hidden" animate="visible">
+        <HeroDetails>
           <HeroHeading>
             <TextHighlight>Hi</TextHighlight>, I&apos;m Mario.
             <br /> <TextHighlight>Front End Developer</TextHighlight> based in
@@ -61,11 +43,7 @@ export default function HeroSection() {
             </HeroButton>
           </HeroButtonContainer>
         </HeroDetails>
-        <HeroIllustrationContainer
-          variants={illustrationVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <HeroIllustrationContainer>
           <HeroIcon />
         </HeroIllustrationContainer>
       </HeroContainer>

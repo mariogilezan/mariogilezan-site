@@ -3,23 +3,23 @@ import { motion } from "framer-motion"
 import HeroIconSrc from "../../assets/code_thinking.svg"
 import { Button } from "../../styles/globalStyles"
 
-export const HeroContainer = styled.section`
+export const HeroContainer = motion(styled.section`
   margin: 2rem 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
   place-content: center;
-`
+`)
 
-export const HeroDetails = motion(styled.div`
+export const HeroDetails = styled.div`
   display: grid;
   place-content: center;
   gap: 2rem;
   @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
     text-align: center;
   }
-`)
+`
 
 export const HeroHeading = styled.h1`
   margin: 0;
@@ -50,10 +50,10 @@ export const HeroButtonContainer = styled.div`
 
 export const HeroButton = styled(Button)``
 
-export const HeroIllustrationContainer = motion(styled.div`
+export const HeroIllustrationContainer = styled.div`
   display: grid;
   place-content: center;
-`)
+`
 
 export const HeroIcon = styled(HeroIconSrc)`
   max-width: 18rem;
