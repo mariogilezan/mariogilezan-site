@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components"
-// import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Link } from "gatsby"
 
 export const theme = {
   color: {
@@ -50,7 +49,7 @@ export const TextHighlight = styled.span`
   color: ${({ theme }) => theme.color.accent};
 `
 
-export const Button = styled(AnchorLink)`
+export const Button = styled(Link)`
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;

@@ -21,11 +21,11 @@ module.exports = {
       },
       {
         name: `About`,
-        slug: `/#about`,
+        slug: `/about`,
       },
       {
         name: `Projects`,
-        slug: `/#projects`,
+        slug: `/projects`,
       },
     ],
   },

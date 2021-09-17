@@ -38,7 +38,7 @@ export default function Navbar() {
               </NavItem>
             ))}
           </NavList>
-          <ContactLink to="/#contact" blue="true">
+          <ContactLink to="/contact" blue="true">
             Contact
           </ContactLink>
         </NavContainer>

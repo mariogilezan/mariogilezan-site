@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { Button, Container } from "../../styles/globalStyles"
 
 export const Nav = motion(styled.nav`
@@ -76,7 +75,7 @@ export const NavItem = styled.li`
   }
 `
 
-export const NavLink = styled(AnchorLink)`
+export const NavLink = styled(Link)`
   text-decoration: none;
   transition: color 0.25s, text-shadow 0.25s;
   &:hover {
