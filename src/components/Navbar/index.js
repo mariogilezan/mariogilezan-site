@@ -1,8 +1,8 @@
 import React from "react"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 import {
-  ContactLink,
   Logo,
+  MenuIconWrapper,
   Nav,
   NavContainer,
   NavItem,
@@ -10,8 +10,11 @@ import {
   NavList,
 } from "./NavbarElements"
 import { TextHighlight } from "../../styles/globalStyles"
+import MenuIcon from "@material-ui/icons/Menu"
+import SocialLinks from "../SocialLinks"
+import MobileMenu from "../MobileMenu"
 
-export default function Navbar() {
+export default function Navbar({ isOpen, toggle }) {
   const { menuLinks } = useSiteMetadata()
   return (
     <>
@@ -33,9 +36,11 @@ export default function Navbar() {
               </NavItem>
             ))}
           </NavList>
-          <ContactLink to="/contact" blue="true">
-            Contact
-          </ContactLink>
+          <SocialLinks />
+          <MenuIconWrapper onClick={toggle}>
+            <MenuIcon fontSize="large" />
+          </MenuIconWrapper>
+          <MobileMenu isOpen={isOpen} toggle={toggle} />
         </NavContainer>
       </Nav>
     </>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle, theme } from "../../styles/globalStyles"
 import Footer from "../Footer"
@@ -22,19 +22,27 @@ const contentVariants = {
   exit: {
     opacity: 0,
     x: 200,
+    transition: {
+      delay: 0.3,
+    },
   },
 }
 
 export default function Layout({ location, children }) {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <>
         <Wrapper data-is-root-path={isRootPath}>
-          <Navbar />
+          <Navbar isOpen={isOpen} toggle={toggle} />
           <Content
             variants={contentVariants}
             initial="hidden"

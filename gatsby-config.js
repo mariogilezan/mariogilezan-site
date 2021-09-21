@@ -27,6 +27,10 @@ module.exports = {
         name: `Projects`,
         slug: `/projects`,
       },
+      {
+        name: `Contact`,
+        slug: `/contact`,
+      },
     ],
   },
   plugins: [

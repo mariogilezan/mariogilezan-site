@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Button } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.color.primary};
@@ -11,17 +10,16 @@ export const Nav = styled.nav`
 `
 
 export const NavContainer = styled.div`
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
     justify-items: center;
-    justify-content: stretch;
+    justify-content: stretch; */
   }
 `
 
@@ -47,10 +45,6 @@ export const Logo = styled(Link)`
     box-shadow: none;
     transform: scale(0.95);
   }
-  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    grid-row: 1 / 2;
-    justify-self: start;
-  }
 `
 
 export const NavList = styled.ul`
@@ -59,9 +53,7 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: center;
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    justify-self: center;
+    display: none;
   }
 `
 
@@ -83,9 +75,10 @@ export const NavLink = styled(Link)`
   }
 `
 
-export const ContactLink = styled(Button)`
+export const MenuIconWrapper = styled.div`
+  display: none;
+  cursor: pointer;
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    justify-self: end;
-    grid-row: 1 / 2;
+    display: block;
   }
 `

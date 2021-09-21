@@ -29,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
+    overflow-x: hidden;
     font-family: "Open Sans", sans-serif;
     background: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.light};

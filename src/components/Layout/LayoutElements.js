@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   gap: 2rem;
   min-height: 100vh;
-  overflow: hidden;
 `
 
 export const Content = motion(styled.main`
