@@ -33,8 +33,8 @@ export default function Layout({ location, children }) {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <>
-        <Navbar />
         <Wrapper data-is-root-path={isRootPath}>
+          <Navbar />
           <Content
             variants={contentVariants}
             initial="hidden"
@@ -43,8 +43,8 @@ export default function Layout({ location, children }) {
           >
             {children}
           </Content>
+          <Footer />
         </Wrapper>
-        <Footer />
       </>
     </ThemeProvider>
   )

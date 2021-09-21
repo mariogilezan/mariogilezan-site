@@ -1,27 +1,20 @@
 import styled from "styled-components"
 import AboutIconSrc from "../../assets/developer_activity.svg"
+import { PageHeading } from "../../styles/globalStyles"
 
 export const AboutContainer = styled.section`
-  padding-top: 2rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-content: center;
   gap: 2rem;
   @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    margin: 2rem 0;
     grid-template-columns: 1fr;
-  }
-  @media screen and (max-height: ${({ theme }) => theme.screen.s}) {
-    margin: 2rem 0;
   }
 `
 
-export const AboutHeading = styled.h2`
+export const AboutHeading = styled(PageHeading)`
   grid-column: 1 / -1;
-  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    text-align: center;
-  }
 `
 
 export const AboutDetails = styled.div`
@@ -36,9 +29,6 @@ export const AboutText = styled.p`
   &::first-letter {
     color: ${({ theme }) => theme.color.accent};
     font-size: 1.6rem;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.screen.md}) {
-    text-align: center;
   }
 `
 

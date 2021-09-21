@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Button, Container } from "../../styles/globalStyles"
+import { Button } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.color.primary};
@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   z-index: 10;
 `
 
-export const NavContainer = styled(Container)`
+export const NavContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -40,7 +40,7 @@ export const Logo = styled(Link)`
   );
   transition: all 0.25s;
   &:hover {
-    box-shadow: 0 0 0.4rem 0.15rem ${({ theme }) => theme.color.accent};
+    box-shadow: 0 0 0.5rem 0.25rem ${({ theme }) => theme.color.accent + "75"};
     transform: scale(1.05);
   }
   &:active {

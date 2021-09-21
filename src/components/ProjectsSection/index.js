@@ -8,6 +8,7 @@ import {
   ProjectIconsContainer,
   ProjectImgContainer,
   ProjectsContainer,
+  ProjectsHeading,
 } from "./ProjectsSectionElements"
 
 export default function ProjectsSection() {
@@ -26,7 +27,8 @@ export default function ProjectsSection() {
 
   return (
     <>
-      <ProjectsContainer id="projects">
+      <ProjectsContainer>
+        <ProjectsHeading>Projects</ProjectsHeading>
         {allFile &&
           allFile.nodes.map(
             file =>

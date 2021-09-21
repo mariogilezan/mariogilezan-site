@@ -4,7 +4,6 @@ import HeroIconSrc from "../../assets/code_thinking.svg"
 import { Button } from "../../styles/globalStyles"
 
 export const HeroContainer = motion(styled.section`
-  margin: 2rem 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

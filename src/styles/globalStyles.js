@@ -45,6 +45,8 @@ export const Container = styled.div`
   padding: 0 1.25rem;
 `
 
+export const PageHeading = styled.h2``
+
 export const TextHighlight = styled.span`
   color: ${({ theme }) => theme.color.accent};
 `

@@ -11,7 +11,7 @@ import {
 export default function AboutSection() {
   return (
     <>
-      <AboutContainer id="about">
+      <AboutContainer>
         <AboutHeading>About Me</AboutHeading>
         <AboutDetails>
           <AboutText>
