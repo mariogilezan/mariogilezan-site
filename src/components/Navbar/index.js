@@ -38,7 +38,7 @@ export default function Navbar({ isOpen, toggle }) {
           </NavList>
           <SocialLinks />
           <MenuIconWrapper onClick={toggle}>
-            <MenuIcon fontSize="large" />
+            <MenuIcon style={{ fontSize: 28 }} />
           </MenuIconWrapper>
           <MobileMenu isOpen={isOpen} toggle={toggle} />
         </NavContainer>

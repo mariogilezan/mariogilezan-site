@@ -79,6 +79,10 @@ export const MenuIconWrapper = styled.div`
   display: none;
   cursor: pointer;
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    display: block;
+    display: flex;
+  }
+  transition: color 0.25s;
+  &:hover {
+    color: ${({ theme }) => theme.color.accent};
   }
 `

@@ -23,7 +23,7 @@ const contentVariants = {
     opacity: 0,
     x: 200,
     transition: {
-      delay: 0.3,
+      delay: 0.2,
     },
   },
 }
