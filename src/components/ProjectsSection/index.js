@@ -7,6 +7,7 @@ import {
   ProjectCard,
   ProjectIconsContainer,
   ProjectImgContainer,
+  ProjectLink,
   ProjectsContainer,
   ProjectsHeading,
 } from "./ProjectsSectionElements"
@@ -41,8 +42,15 @@ export default function ProjectsSection() {
                     />
                   </ProjectImgContainer>
                   <ProjectIconsContainer>
-                    <VisibilityIcon />
-                    <CodeIcon />
+                    <ProjectLink href="https://vrsacinfo.rs/" target="_blank">
+                      <VisibilityIcon style={{ color: "#1e282d" }} />
+                    </ProjectLink>
+                    <ProjectLink
+                      href="https://github.com/mariogilezan/vrsac-info"
+                      target="_blank"
+                    >
+                      <CodeIcon style={{ color: "#1e282d" }} />
+                    </ProjectLink>
                   </ProjectIconsContainer>
                 </ProjectCard>
               )

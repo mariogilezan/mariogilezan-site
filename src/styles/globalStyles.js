@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 export const theme = {
   color: {
     primary: "#1e282d",
+    primaryLighter: "#243036",
     light: "#ffffff",
     accent: "#00a4ea",
   },
@@ -67,7 +68,7 @@ export const Button = styled(Link)`
     transform: scale(1.05);
     box-shadow: 0 0 0.5rem 0.25rem
       ${({ blue, theme }) =>
-        blue ? theme.color.accent + "75" : theme.color.light + "75"};
+        blue ? theme.color.accent + "80" : theme.color.light + "80"};
   }
   &:active {
     box-shadow: none;
