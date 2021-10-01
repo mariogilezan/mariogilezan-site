@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { PageHeading } from "../../styles/globalStyles"
 
 export const ProjectsContainer = styled.section`
   display: grid;
@@ -7,7 +6,8 @@ export const ProjectsContainer = styled.section`
   gap: 2rem;
 `
 
-export const ProjectsHeading = styled(PageHeading)`
+export const ProjectsHeading = styled.h1`
+  margin: 0;
   grid-column: 1 / -1;
 `
 

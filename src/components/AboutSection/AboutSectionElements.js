@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import AboutIconSrc from "../../assets/developer_activity.svg"
-import { PageHeading } from "../../styles/globalStyles"
 
 export const AboutContainer = styled.section`
   width: 100%;
@@ -13,7 +12,8 @@ export const AboutContainer = styled.section`
   }
 `
 
-export const AboutHeading = styled(PageHeading)`
+export const AboutHeading = styled.h1`
+  margin: 0;
   grid-column: 1 / -1;
 `
 
