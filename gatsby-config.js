@@ -1,6 +1,9 @@
 require("dotenv").config()
 
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
     title: `Mario Gilezan`,
     description: `Portfolio website for Mario Gilezan, front-end developer based in Serbia`,

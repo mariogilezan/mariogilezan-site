@@ -9,8 +9,22 @@ export default {
       type: "string",
     },
     {
-      name: "projectLink",
-      title: "Project Link",
+      name: "description",
+      title: "Description",
+      type: "text",
+    },
+    {
+      name: "link",
+      title: "Link",
+      type: "url",
+      validation: Rule =>
+        Rule.uri({
+          scheme: ["http", "https"],
+        }),
+    },
+    {
+      name: "githubLink",
+      title: "Github Link",
       type: "url",
       validation: Rule =>
         Rule.uri({

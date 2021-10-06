@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import AboutIconSrc from "../../assets/developer_activity.svg"
+import { PageHeading } from "../../styles/globalStyles"
 
 export const AboutContainer = styled.section`
   width: 100%;
@@ -12,10 +12,7 @@ export const AboutContainer = styled.section`
   }
 `
 
-export const AboutHeading = styled.h1`
-  margin: 0;
-  grid-column: 1 / -1;
-`
+export const AboutHeading = styled(PageHeading)``
 
 export const AboutDetails = styled.div`
   display: grid;
@@ -27,17 +24,12 @@ export const AboutDetails = styled.div`
 export const AboutText = styled.p`
   line-height: 1.2;
   &::first-letter {
-    color: ${({ theme }) => theme.color.accent};
     font-size: 1.6rem;
+    color: ${({ theme }) => theme.color.accent};
   }
 `
 
-export const AboutIllustrationContainer = styled.div`
+export const AboutImgContainer = styled.div`
   display: grid;
   place-content: center;
-`
-
-export const AboutIcon = styled(AboutIconSrc)`
-  max-width: 14rem;
-  max-height: 14rem;
 `

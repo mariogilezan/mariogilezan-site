@@ -1,3 +1,4 @@
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import {
   HeroButton,
@@ -5,10 +6,8 @@ import {
   HeroContainer,
   HeroDetails,
   HeroHeading,
-  HeroIcon,
-  HeroIllustrationContainer,
+  HeroImgContainer,
 } from "./HeroSectionElements"
-import { TextHighlight } from "../../styles/globalStyles"
 
 const heroVariants = {
   hidden: { opacity: 0 },
@@ -24,16 +23,13 @@ const heroVariants = {
   },
 }
 
-export default function HeroSection() {
+export default function HeroSection({ data }) {
+  const { title, heroImage } = data
   return (
     <>
       <HeroContainer variants={heroVariants} initial="hidden" animate="visible">
         <HeroDetails>
-          <HeroHeading>
-            <TextHighlight>Hi</TextHighlight>, I&apos;m Mario.
-            <br /> <TextHighlight>Front End Developer</TextHighlight> based in
-            Vršac, <TextHighlight>Serbia</TextHighlight>.
-          </HeroHeading>
+          <HeroHeading>{title}</HeroHeading>
           <HeroButtonContainer>
             <HeroButton to="/projects" bold="true" blue="true" lg="true">
               My Projects
@@ -43,9 +39,12 @@ export default function HeroSection() {
             </HeroButton>
           </HeroButtonContainer>
         </HeroDetails>
-        <HeroIllustrationContainer>
-          <HeroIcon />
-        </HeroIllustrationContainer>
+        <HeroImgContainer>
+          <GatsbyImage
+            image={heroImage.asset.gatsbyImageData}
+            alt="hero image"
+          />
+        </HeroImgContainer>
       </HeroContainer>
     </>
   )

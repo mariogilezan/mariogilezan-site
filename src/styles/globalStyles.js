@@ -47,7 +47,22 @@ export const Container = styled.div`
   padding: 0 1.25rem;
 `
 
-export const PageHeading = styled.h2``
+export const PageHeading = styled.h1`
+  position: relative;
+  margin: 0;
+  padding-bottom: 0.3rem;
+  grid-column: 1 / -1;
+  &:after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    background-image: ${({ theme }) =>
+      `linear-gradient(to right, ${theme.color.accent}, ${theme.color.light})`};
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+`
 
 export const TextHighlight = styled.span`
   color: ${({ theme }) => theme.color.accent};

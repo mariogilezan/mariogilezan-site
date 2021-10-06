@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Button } from "../../styles/globalStyles"
+import { Button, PageHeading } from "../../styles/globalStyles"
 
 export const FormContainer = styled.section`
   display: flex;
@@ -7,8 +7,7 @@ export const FormContainer = styled.section`
   gap: 2rem;
 `
 
-export const FormHeading = styled.h1`
-  margin: 0;
+export const FormHeading = styled(PageHeading)`
   margin-bottom: 1rem;
 `
 

@@ -4,13 +4,18 @@ export default {
   type: "document",
   fields: [
     {
-      name: "aboutTitle",
-      title: "About Title",
+      name: "title",
+      title: "Title",
       type: "string",
     },
     {
-      name: "aboutDescription",
-      title: "About Description",
+      name: "description",
+      title: "Description",
+      type: "text",
+    },
+    {
+      name: "hobbies",
+      title: "Hobbies",
       type: "text",
     },
     {

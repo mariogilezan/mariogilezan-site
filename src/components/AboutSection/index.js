@@ -1,35 +1,29 @@
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import {
   AboutContainer,
   AboutDetails,
   AboutHeading,
-  AboutIcon,
-  AboutIllustrationContainer,
+  AboutImgContainer,
   AboutText,
 } from "./AboutSectionElements"
 
-export default function AboutSection() {
+export default function AboutSection({ data }) {
+  const { title, description, hobbies, stacks, aboutImage } = data
   return (
     <>
       <AboutContainer>
-        <AboutHeading>About Me</AboutHeading>
+        <AboutHeading>{title}</AboutHeading>
         <AboutDetails>
-          <AboutText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            ipsa sed excepturi possimus nesciunt sunt ea, perspiciatis
-            accusantium odit porro alias corporis laborum, autem quaerat culpa
-            eos! Numquam, obcaecati consequatur.
-          </AboutText>
-          <AboutText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            ipsa sed excepturi possimus nesciunt sunt ea, perspiciatis
-            accusantium odit porro alias corporis laborum, autem quaerat culpa
-            eos! Numquam, obcaecati consequatur.
-          </AboutText>
+          <AboutText>{description}</AboutText>
+          <AboutText>{hobbies}</AboutText>
         </AboutDetails>
-        <AboutIllustrationContainer>
-          <AboutIcon />
-        </AboutIllustrationContainer>
+        <AboutImgContainer>
+          <GatsbyImage
+            image={aboutImage.asset.gatsbyImageData}
+            alt="about image"
+          />
+        </AboutImgContainer>
       </AboutContainer>
     </>
   )

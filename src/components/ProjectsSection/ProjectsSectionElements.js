@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { PageHeading } from "../../styles/globalStyles"
 
 export const ProjectsContainer = styled.section`
   display: grid;
@@ -6,45 +7,37 @@ export const ProjectsContainer = styled.section`
   gap: 2rem;
 `
 
-export const ProjectsHeading = styled.h1`
-  margin: 0;
-  grid-column: 1 / -1;
-`
+export const ProjectsHeading = styled(PageHeading)``
 
 export const ProjectCard = styled.div`
   background-color: ${({ theme }) => theme.color.primaryLighter};
   border-radius: 0.4rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3rem;
-  justify-items: center;
+  position: relative;
 `
 
 export const ProjectImgContainer = styled.div`
+  display: grid;
+  place-content: center;
   border-radius: 0.4rem;
   img {
-    border-radius: 0.4rem 0.4rem 0 0;
+    border-radius: 0.4rem;
   }
 `
 
+export const ProjectTitle = styled.h5``
+
+export const ProjectDescription = styled.p``
+
 export const ProjectLink = styled.a`
-  background-color: ${({ theme }) => theme.color.light};
-  color: ${({ theme }) => theme.color.primary};
+  background-color: red;
   text-decoration: none;
-  padding: 0.1rem;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
-  align-self: center;
-  transition: background-color 0.25s;
-  &:hover {
-    background-color: ${({ theme }) => theme.color.light + "99"};
-  }
 `
 
 export const ProjectCode = styled(ProjectLink)``
 
 export const ProjectIconsContainer = styled.div`
+  position: absolute;
   display: flex;
   gap: 2rem;
 `

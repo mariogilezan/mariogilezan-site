@@ -13,14 +13,6 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    justify-items: center;
-    justify-content: stretch; */
-  }
 `
 
 export const Logo = styled(Link)`

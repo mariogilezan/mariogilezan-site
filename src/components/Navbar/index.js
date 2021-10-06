@@ -26,11 +26,7 @@ export default function Navbar({ isOpen, toggle }) {
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink
-                  to={link.slug}
-                  name={link.name}
-                  activeStyle={{ color: "#00a4ea" }}
-                >
+                <NavLink to={link.slug} activeStyle={{ color: "#00a4ea" }}>
                   {link.name}
                 </NavLink>
               </NavItem>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import HeroIconSrc from "../../assets/code_thinking.svg"
+// import HeroIconSrc from "../../assets/code_thinking.svg"
 import { Button } from "../../styles/globalStyles"
 
 export const HeroContainer = motion(styled.section`
@@ -26,6 +26,7 @@ export const HeroHeading = styled.h1`
   line-height: 1.2;
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
     font-size: 2.5rem;
+    padding: 0 1rem;
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.xs}) {
     font-size: 2rem;
@@ -49,12 +50,7 @@ export const HeroButtonContainer = styled.div`
 
 export const HeroButton = styled(Button)``
 
-export const HeroIllustrationContainer = styled.div`
+export const HeroImgContainer = styled.div`
   display: grid;
   place-content: center;
-`
-
-export const HeroIcon = styled(HeroIconSrc)`
-  max-width: 18rem;
-  max-height: 18rem;
 `
