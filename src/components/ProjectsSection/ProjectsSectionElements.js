@@ -3,7 +3,7 @@ import { PageHeading } from "../../styles/globalStyles"
 
 export const ProjectsContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 2rem;
 `
 
@@ -24,20 +24,49 @@ export const ProjectImgContainer = styled.div`
   }
 `
 
-export const ProjectTitle = styled.h5``
+export const PorjectDetailsContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(30, 40, 45, 0.5),
+    rgba(30, 40, 45, 1)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  z-index: 10;
+  border-radius: 0.4rem;
+`
 
-export const ProjectDescription = styled.p``
+export const ProjectTitle = styled.h4`
+  align-self: start;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: ${({ theme }) => theme.color.primary};
+`
+
+export const ProjectDescription = styled.p`
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  background-color: ${({ theme }) => theme.color.primary};
+`
 
 export const ProjectLink = styled.a`
-  background-color: red;
   text-decoration: none;
   display: flex;
+  color: ${({ theme }) => theme.color.primary};
 `
 
 export const ProjectCode = styled(ProjectLink)``
 
 export const ProjectIconsContainer = styled.div`
-  position: absolute;
+  padding: 0.5rem;
+  width: 100%;
   display: flex;
-  gap: 2rem;
+  justify-content: space-around;
 `

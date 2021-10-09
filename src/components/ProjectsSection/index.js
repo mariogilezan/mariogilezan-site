@@ -3,6 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import CodeIcon from "@material-ui/icons/Code"
 import VisibilityIcon from "@material-ui/icons/Visibility"
 import {
+  PorjectDetailsContainer,
   ProjectCard,
   ProjectDescription,
   ProjectIconsContainer,
@@ -27,17 +28,18 @@ export default function ProjectsSection({ data }) {
                   alt={project.title}
                 />
               </ProjectImgContainer>
-
-              <ProjectTitle>{project.title}</ProjectTitle>
-              <ProjectDescription>{project.description}</ProjectDescription>
-              <ProjectIconsContainer>
-                <ProjectLink href={project.link} target="_blank">
-                  <VisibilityIcon />
-                </ProjectLink>
-                <ProjectLink href={project.githubLink} target="_blank">
-                  <CodeIcon />
-                </ProjectLink>
-              </ProjectIconsContainer>
+              <PorjectDetailsContainer>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectDescription>{project.description}</ProjectDescription>
+                <ProjectIconsContainer>
+                  <ProjectLink href={project.link} target="_blank">
+                    <VisibilityIcon />
+                  </ProjectLink>
+                  <ProjectLink href={project.githubLink} target="_blank">
+                    <CodeIcon />
+                  </ProjectLink>
+                </ProjectIconsContainer>
+              </PorjectDetailsContainer>
             </ProjectCard>
           ))}
       </ProjectsContainer>
