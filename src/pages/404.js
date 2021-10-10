@@ -28,10 +28,9 @@ const NotFoundMessage = styled.p`
 
 const HomeLink = styled(Link)`
   color: ${({ theme }) => theme.color.accent};
-  text-decoration: none;
-  transition: opacity 0.25s;
+  transition: color 0.25s;
   &:hover {
-    opacity: 0.7;
+    color: ${({ theme }) => theme.color.accent + "90"};
   }
 `
 

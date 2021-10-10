@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export const theme = {
   color: {
     primary: "#1e282d",
-    primaryLighter: "#243036",
+    primaryLighter: "#2b383e",
     light: "#ffffff",
     accent: "#00a4ea",
   },
