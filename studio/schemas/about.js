@@ -19,12 +19,6 @@ export default {
       type: "text",
     },
     {
-      name: "stacks",
-      title: "Stacks",
-      type: "array",
-      of: [{ type: "string" }],
-    },
-    {
       name: "aboutImage",
       title: "About Image",
       type: "image",
