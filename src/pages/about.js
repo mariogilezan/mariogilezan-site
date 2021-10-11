@@ -24,15 +24,9 @@ export const query = graphql`
         title
         description
         hobbies
-        stacks
         aboutImage {
           asset {
-            gatsbyImageData(
-              layout: CONSTRAINED
-              placeholder: BLURRED
-              width: 240
-              height: 240
-            )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
       }
