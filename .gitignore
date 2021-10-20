@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# sanity studio files
+dist
+
 # Mac files
 .DS_Store
 
