@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="./content/assets/page-icon.png" width="80" />
+    <img alt="mariogilezan logo" src="./content/assets/page-icon.png" width="80" />
   </a>
 </p>
 <h1 align="center">
@@ -22,6 +22,6 @@ This is my portfolio website built with [GatsbyJS](https://www.gatsbyjs.com/) on
 
 ## 📝 License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+_0BSD_
 
 <!-- AUTO-GENERATED-CONTENT:END -->

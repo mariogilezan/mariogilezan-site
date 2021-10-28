@@ -4,7 +4,7 @@
   "description": "mariogilezan is a portfolio website for Mario Gilezan who is an Front-End developer based in Serbia.",
   "author": "Mario Gilezan",
   "version": "2.0.0",
-  "license": "MIT",
+  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
