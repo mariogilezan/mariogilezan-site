@@ -14,6 +14,7 @@ module.exports = {
       "react developer",
       "gatsby",
       "sanity",
+      "vrsac",
       "vršac",
     ],
     siteUrl: `http://localhost:8000/`,

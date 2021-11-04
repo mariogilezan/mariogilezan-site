@@ -19,7 +19,7 @@ export default function Projects({ location, data }) {
 
 export const query = graphql`
   query ProjectData {
-    allSanityProject {
+    allSanityProject(sort: { fields: _createdAt }) {
       nodes {
         title
         description
