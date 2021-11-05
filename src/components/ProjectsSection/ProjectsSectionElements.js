@@ -16,8 +16,20 @@ export const ProjectCard = styled.div`
 `
 
 export const ProjectImgContainer = styled.div`
+  position: relative;
   border-radius: 0.4rem;
   img {
+    border-radius: 0.4rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
     border-radius: 0.4rem;
   }
 `
@@ -31,6 +43,7 @@ export const ProjectTitle = styled.h4`
   position: absolute;
   top: 20%;
   left: 0;
+  z-index: 20;
 `
 
 export const ProjectLink = styled.a`

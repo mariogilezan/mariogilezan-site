@@ -25,15 +25,15 @@ module.exports = {
       },
       {
         name: `About`,
-        slug: `/about`,
+        slug: `/about/`,
       },
       {
         name: `Projects`,
-        slug: `/projects`,
+        slug: `/projects/`,
       },
       {
         name: `Contact`,
-        slug: `/contact`,
+        slug: `/contact/`,
       },
     ],
   },
