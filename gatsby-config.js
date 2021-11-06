@@ -17,7 +17,7 @@ module.exports = {
       "vrsac",
       "vršac",
     ],
-    siteUrl: `http://localhost:8000/`,
+    siteUrl: `https://www.mariogilezan.com/`,
     menuLinks: [
       {
         name: `Home`,
