@@ -31,10 +31,10 @@ export default function HeroSection({ data }) {
         <HeroDetails>
           <HeroHeading>{title}</HeroHeading>
           <HeroButtonContainer>
-            <HeroButton to="/projects" bold="true" blue="true" lg="true">
+            <HeroButton to="/projects/" bold="true" blue="true" lg="true">
               My Projects
             </HeroButton>
-            <HeroButton to="/contact" bold="true" lg="true">
+            <HeroButton to="/contact/" bold="true" lg="true">
               Contact Me
             </HeroButton>
           </HeroButtonContainer>

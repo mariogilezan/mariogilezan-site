@@ -29,7 +29,7 @@ export const ProjectImgContainer = styled.div`
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    z-index: 2;
     border-radius: 0.4rem;
   }
 `
@@ -43,7 +43,7 @@ export const ProjectTitle = styled.h4`
   position: absolute;
   top: 20%;
   left: 0;
-  z-index: 20;
+  z-index: 4;
 `
 
 export const ProjectLink = styled.a`
