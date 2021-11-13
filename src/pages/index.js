@@ -8,11 +8,10 @@ export default function Home({ location, data }) {
   const title = "Home"
   const { pathname } = location
   const heroData = data.allSanityHeroSection.nodes[0]
-  const image = data.allSanityAboutSection.nodes[0].aboutImage.asset.url
 
   return (
     <Layout location={location}>
-      <Seo title={title} pathname={pathname} image={image} />
+      <Seo title={title} pathname={pathname} />
       <HeroSection data={heroData} />
     </Layout>
   )
@@ -31,15 +30,6 @@ export const query = graphql`
               width: 280
               placeholder: BLURRED
             )
-          }
-        }
-      }
-    }
-    allSanityAboutSection {
-      nodes {
-        aboutImage {
-          asset {
-            url
           }
         }
       }
