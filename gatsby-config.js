@@ -9,15 +9,17 @@ module.exports = {
     description: `Portfolio website for Mario Gilezan, front-end developer based in Serbia`,
     keywords: [
       "mario gilezan",
-      "web developer",
-      "front-end developer",
-      "react developer",
+      "web development",
+      "frontend",
+      "react",
       "gatsby",
-      "sanity",
+      "web developer",
+      "frontend developer",
+      "react developer",
       "vrsac",
       "vršac",
     ],
-    siteUrl: `https://www.mariogilezan.com/`,
+    siteUrl: `https://mariogilezan.com/`,
     menuLinks: [
       {
         name: `Home`,
