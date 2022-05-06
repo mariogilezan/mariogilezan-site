@@ -7,18 +7,27 @@ export const ProjectsContainer = styled.section`
   gap: 2rem;
 `
 
-export const ProjectsHeading = styled(PageHeading)``
+export const ProjectsHeading = styled(PageHeading)`
+  grid-column: 1 / -1;
+`
 
 export const ProjectCard = styled.div`
   background-color: ${({ theme }) => theme.color.primaryLighter};
   border-radius: 0.4rem;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr 3.75rem;
 `
 
 export const ProjectImgContainer = styled.div`
   position: relative;
   border-radius: 0.4rem;
+  width: 100%;
+  height: 100%;
   img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0.4rem;
   }
   &::before {
