@@ -60,6 +60,7 @@ public
 
 # sanity studio files
 dist
+/.sanity
 
 # Mac files
 .DS_Store
