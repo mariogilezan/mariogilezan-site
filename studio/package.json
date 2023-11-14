@@ -1,7 +1,7 @@
 {
   "name": "mariogilezan-studio",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "package.json",
   "author": "Mario Gilezan <mariogilezan10@gmail.com>",
@@ -15,11 +15,11 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.19.1",
+    "@sanity/vision": "^3.19.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.19.1",
+    "sanity": "^3.19.2",
     "styled-components": "^6.1.1"
   }
 }
