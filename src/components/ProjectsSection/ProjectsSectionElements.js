@@ -31,7 +31,7 @@ export const ProjectImgContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0.4rem;
+    border-radius: 0.4rem 0.4rem 0 0;
   }
   &::before {
     content: "";
@@ -42,7 +42,7 @@ export const ProjectImgContainer = styled.div`
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 2;
-    border-radius: 0.4rem;
+    border-radius: 0.4rem 0.4rem 0 0;
   }
 `
 
