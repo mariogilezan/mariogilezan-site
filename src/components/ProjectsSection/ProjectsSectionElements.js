@@ -1,5 +1,8 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+
 import { PageHeading } from "../../styles/globalStyles"
+import VisibilityIconSrc from "../../assets/icons/visibility.svg"
+import CodeIconSrc from "../../assets/icons/code.svg"
 
 export const ProjectsContainer = styled.section`
   display: grid;
@@ -55,7 +58,14 @@ export const ProjectTitle = styled.h4`
   z-index: 4;
 `
 
-export const ProjectLink = styled.a`
+export const ProjectIconsContainer = styled.div`
+  padding: 0.8rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+`
+
+const iconLinkStyles = css`
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
@@ -63,17 +73,33 @@ export const ProjectLink = styled.a`
   align-items: center;
   gap: 0.4rem;
   transition: color 0.25s;
-  color: ${({ theme }) => theme.color.light};
   &:hover {
     color: ${({ theme }) => theme.color.accent};
+    svg {
+      fill: ${({ theme }) => theme.color.accent};
+    }
   }
 `
 
-export const ProjectCode = styled(ProjectLink)``
+export const ProjectLiveLink = styled.a`
+  ${iconLinkStyles}
+`
 
-export const ProjectIconsContainer = styled.div`
-  padding: 0.8rem 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+export const ProjectCodeLink = styled.a`
+  ${iconLinkStyles}
+`
+
+// Icons
+const iconStyles = css`
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  transition: fill 0.25s;
+`
+
+export const VisibilityIcon = styled(VisibilityIconSrc)`
+  ${iconStyles}
+`
+
+export const CodeIcon = styled(CodeIconSrc)`
+  ${iconStyles}
 `
