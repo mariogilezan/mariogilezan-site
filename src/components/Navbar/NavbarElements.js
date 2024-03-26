@@ -60,7 +60,9 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
-  transition: color 0.25s, text-shadow 0.25s;
+  transition:
+    color 0.25s,
+    text-shadow 0.25s;
   &:hover {
     color: ${({ theme }) => theme.color.accent};
     text-shadow: 0 0 0.5rem ${({ theme }) => theme.color.accent};
@@ -70,11 +72,15 @@ export const NavLink = styled(Link)`
 export const MenuIconWrapper = styled.div`
   display: none;
   cursor: pointer;
+  & > svg g {
+    transition: fill 0.1s;
+  }
+  &:hover {
+    svg g {
+      fill: ${({ theme }) => theme.color.accent};
+    }
+  }
   @media screen and (max-width: ${({ theme }) => theme.screen.sm}) {
     display: flex;
-  }
-  transition: color 0.25s;
-  &:hover {
-    color: ${({ theme }) => theme.color.accent};
   }
 `
