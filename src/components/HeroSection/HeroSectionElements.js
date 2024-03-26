@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-// import HeroIconSrc from "../../assets/code_thinking.svg"
+
 import { Button } from "../../styles/globalStyles"
 
 export const HeroContainer = motion(styled.section`
