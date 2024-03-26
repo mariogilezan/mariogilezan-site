@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 import {
   Logo,
@@ -13,8 +13,14 @@ import { HamburgerMenu, TextHighlight } from "../../styles/globalStyles"
 import SocialLinks from "../SocialLinks"
 import MobileMenu from "../MobileMenu"
 
-export default function Navbar({ isOpen, toggle }) {
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
   const { menuLinks } = useSiteMetadata()
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <Nav>
       <NavContainer>
@@ -31,10 +37,10 @@ export default function Navbar({ isOpen, toggle }) {
           ))}
         </NavList>
         <SocialLinks />
-        <MenuIconWrapper onClick={toggle}>
+        <MenuIconWrapper onClick={toggleMenu}>
           <HamburgerMenu />
         </MenuIconWrapper>
-        <MobileMenu isOpen={isOpen} toggle={toggle} />
+        <MobileMenu isOpen={isOpen} toggle={toggleMenu} />
       </NavContainer>
     </Nav>
   )
