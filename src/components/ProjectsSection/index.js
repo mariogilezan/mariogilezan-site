@@ -1,7 +1,5 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import CodeIcon from "@material-ui/icons/Code"
-import VisibilityIcon from "@material-ui/icons/Visibility"
 import {
   ProjectCard,
   ProjectIconsContainer,
@@ -29,10 +27,10 @@ export default function ProjectsSection({ data }) {
               <ProjectTitle>{project.title}</ProjectTitle>
               <ProjectIconsContainer>
                 <ProjectLink href={project.link} target="_blank">
-                  Live <VisibilityIcon />
+                  Live <span>live icon</span>
                 </ProjectLink>
                 <ProjectLink href={project.githubLink} target="_blank">
-                  Code <CodeIcon />
+                  Code <span>code icon</span>
                 </ProjectLink>
               </ProjectIconsContainer>
             </ProjectCard>

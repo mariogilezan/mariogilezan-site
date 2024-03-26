@@ -10,7 +10,6 @@ import {
   NavList,
 } from "./NavbarElements"
 import { TextHighlight } from "../../styles/globalStyles"
-import MenuIcon from "@material-ui/icons/Menu"
 import SocialLinks from "../SocialLinks"
 import MobileMenu from "../MobileMenu"
 
@@ -34,7 +33,7 @@ export default function Navbar({ isOpen, toggle }) {
           </NavList>
           <SocialLinks />
           <MenuIconWrapper onClick={toggle}>
-            <MenuIcon style={{ fontSize: 28 }} />
+            <span>menu</span>
           </MenuIconWrapper>
           <MobileMenu isOpen={isOpen} toggle={toggle} />
         </NavContainer>

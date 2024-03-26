@@ -1,6 +1,5 @@
 import React from "react"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
-import CloseIcon from "@material-ui/icons/Close"
 import {
   CloseIconWrapper,
   MobileMenuItem,
@@ -22,7 +21,7 @@ export default function MobileMenu({ isOpen, toggle }) {
         animate={isOpen ? "open" : "closed"}
       >
         <CloseIconWrapper onClick={toggle}>
-          <CloseIcon style={{ fontSize: 28 }} />
+          <span>close</span>
         </CloseIconWrapper>
         <MobileMenuList variants={listVariants}>
           {menuLinks.map(link => (
