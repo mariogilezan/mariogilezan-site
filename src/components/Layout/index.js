@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import { ThemeProvider } from "styled-components"
+
 import { GlobalStyle, theme } from "../../styles/globalStyles"
+import { Content, Wrapper } from "./LayoutElements"
 import Footer from "../Footer"
 import Navbar from "../Navbar"
-import { Content, Wrapper } from "./LayoutElements"
 
 const contentVariants = {
   hidden: {
@@ -31,29 +32,23 @@ const contentVariants = {
 export default function Layout({ location, children }) {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <>
-        <Wrapper data-is-root-path={isRootPath}>
-          <Navbar isOpen={isOpen} toggle={toggle} />
-          <Content
-            variants={contentVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            {children}
-          </Content>
-          <Footer />
-        </Wrapper>
-      </>
+
+      <Wrapper data-is-root-path={isRootPath}>
+        <Navbar />
+        <Content
+          variants={contentVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          {children}
+        </Content>
+        <Footer />
+      </Wrapper>
     </ThemeProvider>
   )
 }
