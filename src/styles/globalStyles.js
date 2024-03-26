@@ -1,5 +1,7 @@
-import styled, { createGlobalStyle } from "styled-components"
 import { Link } from "gatsby"
+import styled, { createGlobalStyle, css } from "styled-components"
+import HamburgerSrc from "../assets/icons/hamburger.svg"
+import CloseSrc from "../assets/icons/close.svg"
 
 export const theme = {
   color: {
@@ -78,7 +80,9 @@ export const Button = styled(Link)`
   color: ${({ blue, theme }) =>
     blue ? theme.color.accent : theme.color.light};
   font-weight: ${({ bold }) => bold && "bold"};
-  transition: box-shadow 0.25s, transform 0.25s;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 0 0.5rem 0.25rem
@@ -89,4 +93,18 @@ export const Button = styled(Link)`
     box-shadow: none;
     transform: scale(1);
   }
+`
+
+// Mobile Navigation Icons
+const iconStyles = css`
+  width: 1.75rem;
+  height: 1.75rem;
+`
+
+export const HamburgerMenu = styled(HamburgerSrc)`
+  ${iconStyles}
+`
+
+export const CloseMenu = styled(CloseSrc)`
+  ${iconStyles}
 `
