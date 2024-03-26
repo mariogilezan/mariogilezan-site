@@ -43,8 +43,12 @@ export const CloseIconWrapper = styled.div`
   top: 1.5rem;
   right: 1.25rem;
   cursor: pointer;
-  transition: color 0.25s;
+  & > svg g {
+    transition: fill 0.1s;
+  }
   &:hover {
-    color: ${({ theme }) => theme.color.accent};
+    svg g {
+      fill: ${({ theme }) => theme.color.accent};
+    }
   }
 `
