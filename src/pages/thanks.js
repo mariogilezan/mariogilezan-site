@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import MailSentIconSrc from "../assets/mail_sent.svg"
-import Layout from "../components/Layout"
+
 import Seo from "../components/Seo"
+import Layout from "../components/Layout"
+import MailSentIconSrc from "../assets/mail_sent.svg"
 
 const ThanksWrapper = styled.section`
   display: flex;
@@ -32,23 +33,22 @@ const HomeLink = styled(Link)`
   }
 `
 
-export default function Thanks({ location }) {
-  const title = "Thanks"
-  const { pathname } = location
-
+const ThanksPage = ({ location }) => {
   return (
     <Layout location={location}>
-      <Seo title={title} pathname={pathname} />
-      <>
-        <ThanksWrapper>
-          <ThanksHeading>Message Sent!</ThanksHeading>
-          <MailSentIcon />
-          <ThanksText>
-            Thanks for reaching out! Go back to:{" "}
-            <HomeLink to="/">Home</HomeLink>
-          </ThanksText>
-        </ThanksWrapper>
-      </>
+      <ThanksWrapper>
+        <ThanksHeading>Message Sent!</ThanksHeading>
+        <MailSentIcon />
+        <ThanksText>
+          Thanks for reaching out! Go back to: <HomeLink to="/">Home</HomeLink>
+        </ThanksText>
+      </ThanksWrapper>
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <Seo title="Thanks" pathname={location.pathname} />
+)
+
+export default ThanksPage

@@ -1,21 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
-import HeroSection from "../components/HeroSection"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
 
-export default function Home({ location, data }) {
-  const title = "Home"
-  const { pathname } = location
+import Seo from "../components/Seo"
+import Layout from "../components/Layout"
+import HeroSection from "../components/HeroSection"
+
+const IndexPage = ({ location, data }) => {
   const heroData = data.allSanityHeroSection.nodes[0]
 
   return (
     <Layout location={location}>
-      <Seo title={title} pathname={pathname} />
       <HeroSection data={heroData} />
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <Seo title="Home" pathname={location.pathname} />
+)
+
+export default IndexPage
 
 export const query = graphql`
   query HomeData {
@@ -26,7 +30,6 @@ export const query = graphql`
           asset {
             gatsbyImageData(
               layout: CONSTRAINED
-              height: 280
               width: 280
               placeholder: BLURRED
             )

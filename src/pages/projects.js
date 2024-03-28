@@ -1,25 +1,30 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
+
 import Seo from "../components/Seo"
+import Layout from "../components/Layout"
 import ProjectsSection from "../components/ProjectsSection"
 
-export default function Projects({ location, data }) {
-  const title = "Projects"
-  const { pathname } = location
+const ProjectsPage = ({ location, data }) => {
   const projectData = data.allSanityProject.nodes
+  console.log(projectData)
 
   return (
     <Layout location={location}>
-      <Seo title={title} pathname={pathname} />
       <ProjectsSection data={projectData} />
     </Layout>
   )
 }
 
+export const Head = ({ location }) => (
+  <Seo title="Projects" pathname={location.pathname} />
+)
+
+export default ProjectsPage
+
 export const query = graphql`
   query ProjectData {
-    allSanityProject(sort: { fields: _createdAt }) {
+    allSanityProject(sort: { _createdAt: ASC }) {
       nodes {
         title
         description

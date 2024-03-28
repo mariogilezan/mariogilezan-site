@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Layout from "../components/Layout"
+
 import Seo from "../components/Seo"
+import Layout from "../components/Layout"
 import { Container } from "../styles/globalStyles"
 import NotFoundIconSrc from "../assets/page_not_found.svg"
 
@@ -34,18 +35,17 @@ const HomeLink = styled(Link)`
   }
 `
 
-export default function NotFound({ location }) {
-  const title = "Page Not Found"
+const NotFoundPage = ({ location }) => (
+  <Layout location={location}>
+    <NotFoundContainer>
+      <NotFoundIcon />
+      <NotFoundMessage>
+        Page not found, go back to <HomeLink to="/">Home page</HomeLink>
+      </NotFoundMessage>
+    </NotFoundContainer>
+  </Layout>
+)
 
-  return (
-    <Layout location={location}>
-      <Seo title={title} />
-      <NotFoundContainer>
-        <NotFoundIcon />
-        <NotFoundMessage>
-          Page not found, go back to <HomeLink to="/">Home page</HomeLink>
-        </NotFoundMessage>
-      </NotFoundContainer>
-    </Layout>
-  )
-}
+export const Head = () => <Seo title="404: Not Found" />
+
+export default NotFoundPage

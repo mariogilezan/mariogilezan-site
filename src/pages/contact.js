@@ -1,16 +1,20 @@
 import React from "react"
-import Form from "../components/Form"
-import Layout from "../components/Layout"
+
 import Seo from "../components/Seo"
+import Layout from "../components/Layout"
+import Form from "../components/Form"
 
-export default function Contact({ location }) {
-  const title = "Contact"
-  const { pathname } = location
-
+const ContactPage = ({ location }) => {
+  console.log(location)
   return (
     <Layout location={location}>
-      <Seo title={title} pathname={pathname} />
       <Form />
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <Seo title="Contact" pathname={location.pathname} />
+)
+
+export default ContactPage

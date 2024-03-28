@@ -1,21 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
+
 import Seo from "../components/Seo"
+import Layout from "../components/Layout"
 import AboutSection from "../components/AboutSection"
 
-export default function About({ location, data }) {
-  const title = "About"
-  const { pathname } = location
+const AboutPage = ({ location, data }) => {
   const aboutData = data.allSanityAboutSection.nodes[0]
 
   return (
     <Layout location={location}>
-      <Seo title={title} pathname={pathname} />
       <AboutSection data={aboutData} />
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <Seo title="About" pathname={location.pathname} />
+)
+
+export default AboutPage
 
 export const query = graphql`
   query AboutData {
