@@ -1,17 +1,14 @@
 import React, { useState } from "react"
-import { navigate } from "gatsby-link"
+import { navigate } from "gatsby"
 import {
   ContactForm,
   FormContainer,
   FormEmailLink,
   FormHeading,
   FormInput,
-  FormInputWrapper,
-  FormParagraph,
   FormTextarea,
   FormTextareaWrapper,
   SubmitButton,
-  SubmitButtonWrapper,
 } from "./FormElements"
 
 function encode(data) {
@@ -43,69 +40,67 @@ export default function Form() {
   }
 
   return (
-    <>
-      <FormContainer>
-        <FormHeading>Contact</FormHeading>
-        <FormParagraph>
-          Feel free to contact me by email:{" "}
-          <FormEmailLink href="mailto:mariogilezan10@gmail.com">
-            mariogilezan10@gmail.com
-          </FormEmailLink>{" "}
-          or use the form below.
-        </FormParagraph>
-        <ContactForm
-          name="contact"
-          method="post"
-          action="/thanks"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <FormInput type="hidden" name="form-name" value="contact" />
-          <FormInputWrapper hidden>
-            <FormInput name="bot-field" onChange={handleChange} />
-          </FormInputWrapper>
-          <FormInputWrapper>
-            <FormInput
-              type="text"
-              name="name"
-              placeholder="Name"
-              onChange={handleChange}
-              required
-            />
-          </FormInputWrapper>
-          <FormInputWrapper>
-            <FormInput
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              onChange={handleChange}
-              required
-            />
-          </FormInputWrapper>
-          <FormTextareaWrapper>
-            <FormTextarea
-              name="message"
-              placeholder="Message"
-              rows="7"
-              onChange={handleChange}
-              required
-            ></FormTextarea>
-          </FormTextareaWrapper>
-          <SubmitButtonWrapper>
-            <SubmitButton
-              as="button"
-              type="submit"
-              lg="true"
-              blue="true"
-              bold="true"
-            >
-              Send
-            </SubmitButton>
-          </SubmitButtonWrapper>
-        </ContactForm>
-      </FormContainer>
-    </>
+    <FormContainer>
+      <FormHeading>Contact</FormHeading>
+      <p>
+        Feel free to contact me by email:{" "}
+        <FormEmailLink href="mailto:mariogilezan10@gmail.com">
+          mariogilezan10@gmail.com
+        </FormEmailLink>{" "}
+        or use the form below.
+      </p>
+      <ContactForm
+        name="contact"
+        method="post"
+        action="/thanks"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+      >
+        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+        <FormInput type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <FormInput name="bot-field" onChange={handleChange} />
+        </p>
+        <p>
+          <FormInput
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+            required
+          />
+        </p>
+        <p>
+          <FormInput
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            onChange={handleChange}
+            required
+          />
+        </p>
+        <FormTextareaWrapper>
+          <FormTextarea
+            name="message"
+            placeholder="Message"
+            rows="7"
+            onChange={handleChange}
+            required
+          ></FormTextarea>
+        </FormTextareaWrapper>
+        <p>
+          <SubmitButton
+            as="button"
+            type="submit"
+            lg="true"
+            blue="true"
+            bold="true"
+          >
+            Send
+          </SubmitButton>
+        </p>
+      </ContactForm>
+    </FormContainer>
   )
 }
