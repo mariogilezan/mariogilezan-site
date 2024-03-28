@@ -1,5 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+
 import {
   CodeIcon,
   ProjectCard,
@@ -23,7 +24,7 @@ export default function ProjectsSection({ data }) {
             <ProjectImgContainer>
               <GatsbyImage
                 image={project.projectImage.asset.gatsbyImageData}
-                alt={project.title}
+                alt={`${project.title} img`}
               />
             </ProjectImgContainer>
             <ProjectTitle>{project.title}</ProjectTitle>
