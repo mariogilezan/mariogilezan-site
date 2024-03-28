@@ -1,5 +1,6 @@
-import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
+
 import {
   HeroButton,
   HeroButtonContainer,
@@ -26,26 +27,21 @@ const heroVariants = {
 export default function HeroSection({ data }) {
   const { title, heroImage } = data
   return (
-    <>
-      <HeroContainer variants={heroVariants} initial="hidden" animate="visible">
-        <HeroDetails>
-          <HeroHeading>{title}</HeroHeading>
-          <HeroButtonContainer>
-            <HeroButton to="/projects/" bold="true" blue="true" lg="true">
-              My Projects
-            </HeroButton>
-            <HeroButton to="/contact/" bold="true" lg="true">
-              Contact Me
-            </HeroButton>
-          </HeroButtonContainer>
-        </HeroDetails>
-        <HeroImgContainer>
-          <GatsbyImage
-            image={heroImage.asset.gatsbyImageData}
-            alt="hero image"
-          />
-        </HeroImgContainer>
-      </HeroContainer>
-    </>
+    <HeroContainer variants={heroVariants} initial="hidden" animate="visible">
+      <HeroDetails>
+        <HeroHeading>{title}</HeroHeading>
+        <HeroButtonContainer>
+          <HeroButton to="/projects/" bold="true" blue="true" lg="true">
+            My Projects
+          </HeroButton>
+          <HeroButton to="/contact/" bold="true" lg="true">
+            Contact Me
+          </HeroButton>
+        </HeroButtonContainer>
+      </HeroDetails>
+      <HeroImgContainer>
+        <GatsbyImage image={heroImage.asset.gatsbyImageData} alt="hero image" />
+      </HeroImgContainer>
+    </HeroContainer>
   )
 }

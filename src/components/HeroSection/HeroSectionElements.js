@@ -7,8 +7,8 @@ export const HeroContainer = motion(styled.section`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1rem;
   place-content: center;
+  gap: 2rem;
 `)
 
 export const HeroDetails = styled.div`
