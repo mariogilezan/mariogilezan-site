@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+
 import { Button, PageHeading } from "../../styles/globalStyles"
 
 export const FormContainer = styled.section`
@@ -34,19 +35,24 @@ export const ContactForm = styled.form`
   }
 `
 
-export const FormInputWrapper = styled.p``
-
-export const FormInput = styled.input`
+const inputStyles = css`
   outline: none;
   border: 3px solid transparent;
   padding: 0.8rem 0.4rem;
   width: 100%;
-  transition: border 0.25s, color 0.3s, background-color 0.25s;
+  transition:
+    border 0.25s,
+    color 0.3s,
+    background-color 0.25s;
   &:focus {
     border-color: ${({ theme }) => theme.color.accent};
     background-color: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.light};
   }
+`
+
+export const FormInput = styled.input`
+  ${inputStyles}
 `
 
 export const FormTextareaWrapper = styled.p`
@@ -54,20 +60,9 @@ export const FormTextareaWrapper = styled.p`
 `
 
 export const FormTextarea = styled.textarea`
-  outline: none;
-  width: 100%;
   display: block;
-  border: 3px solid transparent;
-  padding: 0.8rem 0.4rem;
-  transition: border 0.25s, color 0.3s, background-color 0.25s;
-  &:focus {
-    border-color: ${({ theme }) => theme.color.accent};
-    background-color: ${({ theme }) => theme.color.primary};
-    color: ${({ theme }) => theme.color.light};
-  }
+  ${inputStyles}
 `
-
-export const SubmitButtonWrapper = styled.p``
 
 export const SubmitButton = styled(Button)`
   background-color: transparent;
