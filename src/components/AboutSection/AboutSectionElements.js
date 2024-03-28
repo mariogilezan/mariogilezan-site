@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import { PageHeading } from "../../styles/globalStyles"
 import HtmlLogoSrc from "../../assets/html_logo.svg"
 import CssLogoSrc from "../../assets/css_logo.svg"
@@ -69,8 +70,8 @@ export const StacksHeading = styled.h4`
 `
 
 export const StacksList = styled.ul`
-  font-size: 0.9rem;
   list-style: none;
+  font-size: 0.9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.8rem;
