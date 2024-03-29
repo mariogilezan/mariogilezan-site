@@ -8,7 +8,9 @@ import { AnimatePresence } from "framer-motion"
 
 // Page transition animation
 export const wrapPageElement = ({ element }) => (
-  <AnimatePresence mode="wait">{element}</AnimatePresence>
+  <AnimatePresence mode="wait" initial={false}>
+    {element}
+  </AnimatePresence>
 )
 
 // Live chat widget
