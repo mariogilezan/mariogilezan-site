@@ -7,7 +7,6 @@ import ProjectsSection from "../components/ProjectsSection"
 
 const ProjectsPage = ({ location, data }) => {
   const projectData = data.allSanityProject.nodes
-  console.log(projectData)
 
   return (
     <Layout location={location}>
