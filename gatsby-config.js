@@ -19,7 +19,7 @@ module.exports = {
       "vrsac",
       "vršac",
     ],
-    siteUrl: `https://mariogilezan.com/`,
+    siteUrl: `https://mariogilezan.netlify.app/`,
     menuLinks: [
       {
         name: `Home`,
